@@ -1,0 +1,11 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="استكشف مواهب Drama Road حسب العمر والنوع والمهارات"><title>المواهب | Drama Road</title><link rel="stylesheet" href="styles.css"></head><body data-page="talents"><div id="siteHeader"></div><main>
+<section class="page-hero"><div class="container"><div class="page-hero-card"><span class="eyebrow">Casting Search</span><h1>استكشف <span style="color:var(--red)">المواهب</span></h1><p>استخدم الفلاتر للوصول إلى المواهب المناسبة للدور. مثال: اختر «بنت» والعمر «16 سنة» لعرض المطابقات مباشرة بعد إدخال نوع كل موهبة من الإدارة.</p></div></div></section>
+<section class="section tight"><div class="container"><div class="filter-panel">
+<div class="field"><label for="searchFilter">الاسم أو المهارة</label><input id="searchFilter" type="search" placeholder="ابحث باسم الموهبة..."></div>
+<div class="field"><label for="genderFilter">الجنس</label><select id="genderFilter"><option value="">بنت وولد</option><option value="female">بنت</option><option value="male">ولد</option></select></div>
+<div class="field"><label for="ageFilter">العمر</label><select id="ageFilter"><option value="">كل الأعمار</option></select></div>
+<div class="field"><label for="yearsFilter">مدة الدراسة</label><select id="yearsFilter"><option value="">الكل</option><option value="3">3 سنوات</option><option value="4">4 سنوات</option></select></div>
+<div class="field"><label for="skillFilter">المهارة</label><select id="skillFilter"><option value="">كل المهارات</option></select></div>
+<div class="filter-actions"><button class="btn btn-outline" type="button" id="resetFilters">مسح</button></div></div>
+<div class="active-filter-bar"><div class="active-chips" id="activeChips"></div><div>النتائج: <span class="result-count" id="resultCount">0 موهبة</span></div></div><div class="talent-grid" id="talentGrid"></div></div></section>
+</main><div id="siteFooter"></div><script src="data.js"></script><script src="core.js"></script><script src="components.js"></script><script src="site.js"></script></body></html>

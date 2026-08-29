@@ -1,0 +1,22 @@
+window.DRAMA_ROAD_SEED = [
+  { id:'zina-zidan', name:'زينة زيدان', age:12, gender:'', trainingYears:3, image:'assets/images/zina-zidan.webp', heightCm:null, skills:[], projects:[] },
+  { id:'inji-ibrahim', name:'إنجي إبراهيم', age:15, gender:'', trainingYears:4, image:'assets/images/inji-ibrahim.webp', heightCm:null, skills:[], projects:[] },
+  { id:'jad-alrajoula', name:'جاد الرجولة', age:10, gender:'', trainingYears:4, image:'assets/images/jad-alrajoula.webp', heightCm:null, skills:[], projects:[] },
+  { id:'omar-tarkhoum', name:'عمر طرخوم', age:15, gender:'', trainingYears:4, image:'assets/images/omar-tarkhoum.webp', heightCm:null, skills:[], projects:[] },
+  { id:'zuhair-allaham', name:'زهير اللحام', age:15, gender:'', trainingYears:3, image:'assets/images/zuhair-allaham.webp', heightCm:190, skills:[], projects:[] },
+  { id:'jawad-khattab', name:'جواد خطاب', age:15, gender:'', trainingYears:4, image:'assets/images/jawad-khattab.webp', heightCm:null, skills:[], projects:[] },
+  { id:'nasser-abboud', name:'ناصر عبود', age:8, gender:'', trainingYears:4, image:'assets/images/nasser-abboud.webp', heightCm:null, skills:[], projects:[] },
+  { id:'ali-yakhoukh', name:'علي ياخوخ', age:16, gender:'', trainingYears:4, image:'assets/images/ali-yakhoukh.webp', heightCm:null, skills:[], projects:[] },
+  { id:'jamil-almarai', name:'جميل المرعي', age:11, gender:'', trainingYears:4, image:'assets/images/jamil-almarai.webp', heightCm:null, skills:[], projects:[] },
+  { id:'mahmoud-ali-jannad', name:'محمود علي جناد', age:12, gender:'', trainingYears:4, image:'assets/images/mahmoud-ali-jannad.webp', heightCm:null, skills:['غناء'], projects:[] },
+  { id:'mohammad-saif-khaled', name:'محمد سيف خالد', age:13, gender:'', trainingYears:4, image:'assets/images/mohammad-saif-khaled.webp', heightCm:null, skills:[], projects:[] },
+  { id:'rita-ismail', name:'ريتا إسماعيل', age:13, gender:'', trainingYears:3, image:'assets/images/rita-ismail.webp', heightCm:null, skills:[], projects:[] },
+  { id:'alaa-sabsoub', name:'علاء سبسوب', age:16, gender:'', trainingYears:3, image:'assets/images/alaa-sabsoub.webp', heightCm:null, skills:[], projects:[] },
+  { id:'rinad-saleh', name:'ريناد صالح', age:14, gender:'', trainingYears:3, image:'assets/images/rinad-saleh.webp', heightCm:null, skills:[], projects:[] },
+  { id:'ali-ismail', name:'علي إسماعيل', age:14, gender:'', trainingYears:3, image:'assets/images/ali-ismail.webp', heightCm:null, skills:[], projects:[] },
+  { id:'rashid-alhamwi', name:'راشد الحموي', age:16, gender:'', trainingYears:3, image:'assets/images/rashid-alhamwi.webp', heightCm:null, skills:[], projects:[] },
+  { id:'esterfan-tamer', name:'استرفان تامر', age:13, gender:'', trainingYears:3, image:'assets/images/esterfan-tamer.webp', heightCm:null, skills:[], projects:[] },
+  { id:'mazen-malham', name:'مازن ملحم', age:13, gender:'', trainingYears:3, image:'assets/images/mazen-malham.webp', heightCm:null, skills:[], projects:[] },
+  { id:'zein-malham', name:'زين ملحم', age:11, gender:'', trainingYears:3, image:'assets/images/zein-malham.webp', heightCm:null, skills:[], projects:[] },
+  { id:'fajr-qais', name:'فجر قيس', age:17, gender:'', trainingYears:3, image:'assets/images/fajr-qais.webp', heightCm:null, skills:[], projects:[] }
+];
