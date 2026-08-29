@@ -36,8 +36,32 @@ function renderTalents(){let name=$('#nameFilter').value.trim(),age=$('#ageFilte
 $('#clearFilters').onclick=()=>{['nameFilter','ageFilter','yearsFilter','genderFilter','skillFilter'].forEach(id=>$('#'+id).value='');renderTalents()};
 $('#sortBtn').onclick=()=>{ageAscending=!ageAscending;$('#sortBtn').textContent=`ترتيب حسب العمر ${ageAscending?'↑':'↓'}`;renderTalents()};
 $('#quickSearch').onclick=()=>{$('#ageFilter').value=$('#quickAge').value;$('#yearsFilter').value=$('#quickYears').value;$('#genderFilter').value=$('#quickGender').value;$('#nameFilter').value='';$('#skillFilter').value='';view('talents')};
-function openProfile(id){const t=talents.find(x=>x.id===id);if(!t)return;const tp=projects.filter(p=>p.talentId===id);$('#profileContent').innerHTML=`<div class="profile-wrap"><div class="profile-image"><img src="${esc(t.image||'logo.webp')}" alt="${esc(t.name)}" onerror="this.src='logo.webp'"></div><div class="profile-info"><span class="eyebrow">DRAMA ROAD TALENT</span><h2>${esc(t.name)}</h2><div class="meta"><span class="chip red">${t.age} سنة</span><span class="chip">${t.trainingYears} سنوات دراسة</span>${t.heightCm?`<span class="chip">${t.heightCm} سم</span>`:''}${t.gender?`<span class="chip">${esc(t.gender)}</span>`:''}</div><div class="profile-details"><div class="detail"><small>العمر</small><b>${t.age} سنة</b></div><div class="detail"><small>مدة الدراسة</small><b>${t.trainingYears} سنوات في Drama Road</b></div><div class="detail"><small>المهارات</small><b>${t.skills?.length?esc(t.skills.join('، ')):'—'}</b></div><div class="detail"><small>ملاحظات</small><b>${esc(t.notes||'—')}</b></div></div><div class="profile-projects"><h4>المشاريع والأعمال</h4>${tp.length?tp.map(p=>`<div class="mini-project"><b>${esc(p.title)}</b><div>${esc(p.type||'')} ${p.year?'• '+p.year:''}${p.role?' • '+esc(p.role):''}</div></div>`).join(''):'<p style="color:#888">لا توجد مشاريع مضافة بعد.</p>'}</div></div></div>`;$('#profileModal').classList.add('show');$('#profileModal').setAttribute('aria-hidden','false')}
-$('#closeProfile').onclick=()=>$('#profileModal').classList.remove('show');$('#profileModal').onclick=e=>{if(e.target===$('#profileModal'))$('#profileModal').classList.remove('show')};
+function talentProfileUrl(t){
+  const base=location.origin+location.pathname;
+  return `${base}?talent=${encodeURIComponent(t.id)}`;
+}
+function talentImageUrl(t){
+  return new URL(t.image||'logo.webp', location.href).href;
+}
+function whatsappTalentUrl(t){
+  const message=[
+    'مرحباً معهد Drama Road،',
+    'أرغب بالتواصل بخصوص هذه الموهبة:',
+    `الاسم: ${t.name}`,
+    `العمر: ${t.age} سنة`,
+    `مدة الدراسة: ${t.trainingYears} سنوات`,
+    t.gender?`الجنس: ${t.gender==='أنثى'?'بنت':'ولد'}`:'',
+    t.skills?.length?`المهارات: ${t.skills.join('، ')}`:'',
+    `صورة الموهبة: ${talentImageUrl(t)}`,
+    `ملف الموهبة: ${talentProfileUrl(t)}`,
+    '',
+    'أرجو تأكيد التواصل بخصوص هذه الموهبة.'
+  ].filter(Boolean).join('\n');
+  return `https://wa.me/963996308308?text=${encodeURIComponent(message)}`;
+}
+function openProfile(id){const t=talents.find(x=>x.id===id);if(!t)return;const tp=projects.filter(p=>p.talentId===id);$('#profileContent').innerHTML=`<div class="profile-wrap"><div class="profile-image"><img src="${esc(t.image||'logo.webp')}" alt="${esc(t.name)}" onerror="this.src='logo.webp'"></div><div class="profile-info"><span class="eyebrow">DRAMA ROAD TALENT</span><h2>${esc(t.name)}</h2><div class="meta"><span class="chip red">${t.age} سنة</span><span class="chip">${t.trainingYears} سنوات دراسة</span>${t.heightCm?`<span class="chip">${t.heightCm} سم</span>`:''}${t.gender?`<span class="chip">${esc(t.gender==='أنثى'?'بنت':'ولد')}</span>`:''}</div><div class="profile-details"><div class="detail"><small>العمر</small><b>${t.age} سنة</b></div><div class="detail"><small>مدة الدراسة</small><b>${t.trainingYears} سنوات في Drama Road</b></div><div class="detail"><small>المهارات</small><b>${t.skills?.length?esc(t.skills.join('، ')):'—'}</b></div><div class="detail"><small>ملاحظات</small><b>${esc(t.notes||'—')}</b></div></div><a class="whatsapp-talent-btn" href="${whatsappTalentUrl(t)}" target="_blank" rel="noopener"><span>واتساب</span><div><b>طلب هذه الموهبة</b><small>إرسال الاسم والصورة إلى معهد Drama Road</small></div></a><div class="profile-projects"><h4>المشاريع والأعمال</h4>${tp.length?tp.map(p=>`<div class="mini-project"><b>${esc(p.title)}</b><div>${esc(p.type||'')} ${p.year?'• '+p.year:''}${p.role?' • '+esc(p.role):''}</div></div>`).join(''):'<p style="color:#888">لا توجد مشاريع مضافة بعد.</p>'}</div></div></div>`;$('#profileModal').classList.add('show');$('#profileModal').setAttribute('aria-hidden','false');history.replaceState(null,'',talentProfileUrl(t))}
+function closeProfile(){ $('#profileModal').classList.remove('show'); $('#profileModal').setAttribute('aria-hidden','true'); history.replaceState(null,'',location.pathname); }
+$('#closeProfile').onclick=closeProfile;$('#profileModal').onclick=e=>{if(e.target===$('#profileModal'))closeProfile()};
 function renderProjects(){if(!projects.length){$('#projectsGrid').innerHTML='<div class="empty">لم تتم إضافة مشاريع بعد. يمكنك إضافة أول مشروع من قسم الإدارة.</div>';return}$('#projectsGrid').innerHTML=projects.map(p=>{const t=talents.find(x=>x.id===p.talentId);return `<article class="project-card"><span class="eyebrow">${esc(p.type||'PROJECT')}</span><h3>${esc(p.title)}</h3><p><b>${esc(t?.name||'موهبة')}</b>${p.role?' • '+esc(p.role):''}${p.year?' • '+p.year:''}</p></article>`}).join('')}
 function updateStats(){$('#talentCount').textContent=talents.length;$('#projectCount').textContent=projects.length}
-$('#year').textContent=new Date().getFullYear();renderFeatured();renderTalents();renderProjects();updateStats();
+$('#year').textContent=new Date().getFullYear();renderFeatured();renderTalents();renderProjects();updateStats();const initialTalent=new URLSearchParams(location.search).get('talent');if(initialTalent&&talents.some(t=>t.id===initialTalent))setTimeout(()=>openProfile(initialTalent),80);
