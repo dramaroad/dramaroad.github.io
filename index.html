@@ -50,8 +50,8 @@
         <p>فلترة حسب العمر، مدة الدراسة، الجنس عند توفره، والمهارات.</p>
       </div>
       <div class="casting-controls">
-        <label>العمر<input id="quickAge" type="number" min="1" max="25" placeholder="مثال: 16"></label>
-        <label>مدة الدراسة<select id="quickYears"><option value="">الكل</option><option value="3">3 سنوات</option><option value="4">4 سنوات</option></select></label>
+        <label>العمر<input id="quickAge" type="number" min="0.5" max="25" step="0.5" placeholder="مثال: 16"></label>
+        <label>مدة الدراسة<select id="quickYears"><option value="">الكل</option><option value="0.5">6 أشهر</option><option value="3">3 سنوات</option><option value="4">4 سنوات</option></select></label>
         <label>الجنس<select id="quickGender"><option value="">الكل</option><option value="أنثى">بنت</option><option value="ذكر">ولد</option></select></label>
         <button class="primary" id="quickSearch">عرض النتائج</button>
       </div>
@@ -102,8 +102,8 @@
     <div class="section-heading page-head"><div><span class="eyebrow">TALENT DATABASE</span><h1>جميع المواهب</h1><p>20 موهبة من قسم الأطفال في Drama Road.</p></div></div>
     <div class="filter-bar">
       <input id="nameFilter" placeholder="بحث بالاسم...">
-      <input id="ageFilter" type="number" min="1" max="25" placeholder="العمر">
-      <select id="yearsFilter"><option value="">مدة الدراسة</option><option value="3">3 سنوات</option><option value="4">4 سنوات</option></select>
+      <input id="ageFilter" type="number" min="0.5" max="25" step="0.5" placeholder="العمر">
+      <select id="yearsFilter"><option value="">مدة الدراسة</option><option value="0.5">6 أشهر</option><option value="3">3 سنوات</option><option value="4">4 سنوات</option></select>
       <select id="genderFilter"><option value="">الجنس</option><option value="أنثى">بنت</option><option value="ذكر">ولد</option></select>
       <input id="skillFilter" placeholder="المهارة...">
       <button id="clearFilters">مسح</button>
