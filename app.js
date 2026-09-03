@@ -20,7 +20,7 @@ const SEED_TALENTS=[
 {id:'zein-malham',name:'زين ملحم',age:11,trainingYears:3,image:'zein-malham.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
 {id:'fajr-qais',name:'فجر قيس',age:17,trainingYears:3,image:'fajr-qais.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
 {id:'riyad-bayraktar',name:'رياض بيرقدار',age:10,trainingYears:0.5,image:'riyad-bayraktar.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
-{id:'heidi-qurqur',name:'هايدي قرقور',age:0.5,ageText:'6 أشهر',trainingYears:4,image:'heidi-qurqur.webp',heightCm:null,skills:[],gender:'أنثى',notes:''},
+{id:'heidi-qurqur',name:'هايدي قرقور',age:6,ageText:'6 سنوات',trainingYears:0.5,image:'heidi-qurqur.webp',heightCm:null,skills:[],gender:'أنثى',notes:''},
 {id:'miabel-khoury',name:'ميابيل خوري',age:12,trainingYears:0.5,image:'miabel-khoury.webp',heightCm:null,skills:[],gender:'أنثى',notes:''},
 {id:'hikmat-alsayed-hassan',name:'حكمت السيد حسن',age:10,trainingYears:0.5,image:'hikmat-alsayed-hassan.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
 {id:'rodrik',name:'رودريك',age:6,trainingYears:0.5,image:'rodrik.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
