@@ -24,7 +24,12 @@ const SEED_TALENTS=[
 {id:'miabel-khoury',name:'ميابيل خوري',age:12,trainingYears:0.5,image:'miabel-khoury.webp',heightCm:null,skills:[],gender:'أنثى',notes:''},
 {id:'hikmat-alsayed-hassan',name:'حكمت السيد حسن',age:10,trainingYears:0.5,image:'hikmat-alsayed-hassan.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
 {id:'rodrik',name:'رودريك',age:6,trainingYears:0.5,image:'rodrik.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
-{id:'asad-haris',name:'اسد حارس',age:10,trainingYears:0.5,image:'asad-haris.webp',heightCm:null,skills:[],gender:'ذكر',notes:''}
+{id:'asad-haris',name:'اسد حارس',age:10,trainingYears:0.5,image:'asad-haris.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
+{id:'talia-alomari',name:'تاليا العمري',age:12,trainingYears:1,image:'talia-alomari.webp',heightCm:null,skills:[],gender:'أنثى',notes:''},
+{id:'jad-shoushara',name:'جاد شوشرة',age:11,trainingYears:1,image:'jad-shoushara.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
+{id:'taj-aldeen-aqla',name:'تاج الدين عقله',age:17,trainingYears:4,image:'taj-aldeen-aqla.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
+{id:'jawad-khalouf',name:'جواد خلوف',age:17,trainingYears:4,image:'jawad-khalouf.webp',heightCm:null,skills:[],gender:'ذكر',notes:''},
+{id:'mila-wahba',name:'ميلا وهبة',age:16,trainingYears:4,image:'mila-wahba.webp',heightCm:null,skills:[],gender:'أنثى',notes:''}
 ];
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 let talents=[...SEED_TALENTS];
