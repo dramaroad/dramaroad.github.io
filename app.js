@@ -34,7 +34,11 @@ const SEED_TALENTS=[
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 let talents=[...SEED_TALENTS];
 let projects=[
-{id:'esterfan-project-1',talentId:'esterfan-tamer',title:'مشاهدة مشروع استرفان تامر',type:'مشروع تمثيلي',year:'',role:'',url:'https://drive.google.com/file/d/1kc90HQBcvUjj6nWUGME7q-syuaIavpt1/view?usp=sharing'}
+{id:'esterfan-project-1',talentId:'esterfan-tamer',title:'مشاهدة مشروع استرفان تامر',type:'مشروع تمثيلي',year:'',role:'',url:'https://drive.google.com/file/d/1kc90HQBcvUjj6nWUGME7q-syuaIavpt1/view?usp=sharing'},
+{id:'omar-project-1',talentId:'omar-tarkhoum',title:'مشاريع عمر طرخوم',type:'مشاريع الطالب',year:'',role:'',url:'https://drive.google.com/drive/folders/16mabJADzqyyw-r_1edmyMX2OT15HP-fI'},
+{id:'alaa-project-1',talentId:'alaa-sabsoub',title:'مشاريع علاء سبسوب',type:'مشاريع الطالب',year:'',role:'',url:'https://drive.google.com/drive/folders/1ELTF0pj4fFPSmtjZVAcXovAMiHL_h53D'},
+{id:'talia-project-1',talentId:'talia-alomari',title:'مشاريع تاليا عبد الهادي العمري',type:'مشاريع الطالبة',year:'',role:'',url:'https://drive.google.com/drive/folders/1rRaha-kPciJy7arAUtHif7Di22xd_ICC'},
+{id:'taj-project-1',talentId:'taj-aldeen-aqla',title:'مشاريع تاج الدين العقلة',type:'مشاريع الطالب',year:'',role:'',url:'https://drive.google.com/drive/folders/1hEDlXO7P4wsiYnHIYsAh0CZDY1Mk_u-t'}
 ];
 let ageAscending=true;
 function esc(v=''){return String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c]))}
