@@ -16,3 +16,24 @@
 .project-link-btn{display:inline-flex;align-items:center;justify-content:center;margin-top:10px;padding:10px 14px;border-radius:12px;background:var(--red);color:#fff;text-decoration:none;font-weight:800;font-size:13px}.project-link-btn:hover{background:var(--red2)}
 
 .profile-title-row{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:8px 0 14px}.profile-title-row h2{margin:0}.profile-projects-jump{border:0;border-radius:14px;background:var(--red);color:#fff;padding:11px 15px;font:inherit;font-size:13px;font-weight:900;cursor:pointer;white-space:nowrap;box-shadow:0 8px 20px rgba(229,32,38,.18);transition:.2s ease}.profile-projects-jump:hover{transform:translateY(-1px);background:var(--red2)}@media(max-width:560px){.profile-title-row{align-items:stretch}.profile-title-row h2{width:100%}.profile-projects-jump{width:100%;padding:13px 15px;font-size:14px}}
+
+
+/* Profile UX update: compact info + project button beside student name */
+.profile-title-row{display:flex;align-items:center;justify-content:flex-start;gap:12px;flex-wrap:nowrap;margin:8px 0 14px}
+.profile-title-row h2{margin:0;flex:0 1 auto;min-width:0}
+.profile-projects-jump{flex:0 0 auto;border:1px solid #ffd7da;border-radius:999px;background:#fff1f2;color:var(--red);padding:8px 13px;font-size:12px;font-weight:900;box-shadow:none}
+.profile-projects-jump:hover{background:var(--red);color:#fff;transform:none}
+.compact-detail{padding:10px 12px;min-height:70px;display:flex;flex-direction:column;justify-content:center}
+.compact-detail small{margin-bottom:3px;font-size:11px}
+.compact-detail b{font-size:14px;line-height:1.45}
+@media(max-width:560px){
+  .profile-info{padding:25px 22px 30px}
+  .profile-info h2{font-size:29px;line-height:1.15}
+  .profile-title-row{gap:8px;align-items:center;flex-wrap:nowrap}
+  .profile-title-row h2{width:auto;flex:1 1 auto}
+  .profile-projects-jump{width:auto;max-width:42%;padding:7px 10px;font-size:11px;line-height:1.2}
+  .profile-details{gap:8px;margin:18px 0}
+  .compact-detail{min-height:62px;padding:8px 10px;border-radius:12px}
+  .compact-detail small{font-size:10px}
+  .compact-detail b{font-size:13px}
+}
