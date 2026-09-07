@@ -37,3 +37,12 @@
   .compact-detail small{font-size:10px}
   .compact-detail b{font-size:13px}
 }
+
+/* Projects UX: medium circular student photo; talent cards keep photo clean */
+.project-card-with-photo{padding:20px}
+.project-student-row{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.project-student-photo{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.10);background:#f3f3f3;flex:0 0 auto}
+.project-student-meta{display:flex;flex-direction:column;gap:5px;min-width:0}
+.project-student-meta b{font-size:17px;line-height:1.35}
+.project-card-with-photo h3{margin-top:6px}
+@media(max-width:560px){.project-student-photo{width:76px;height:76px}.project-student-meta b{font-size:16px}}
